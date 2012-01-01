@@ -1,3 +1,19 @@
-Relies on Twitter Bootstrap v1.40: https://github.com/twitter/bootstrap
+Description:
+    (Currently this is more of a 'Goals' statement)
+    A simple webapp that will display a list of recurring daily tasks that can 
+    be checked off each day when they are completed. 
+    
+Status:
+    Implement a prototype using session variables.
+    DONE Support for per username displays.
+    DONE Use Bootstrap for the look&feel.
 
-Initial structure based off of sinatra-bootstrap: https://github.com/pokle/sinatra-bootstrap
+Libraries:
+
+Twitter Bootstrap v1.40: 
+    https://github.com/twitter/bootstrap
+
+Acknowledgements:
+
+Initial structure based off of sinatra-bootstrap: 
+    https://github.com/pokle/sinatra-bootstrap
