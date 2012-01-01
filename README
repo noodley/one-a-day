@@ -1,0 +1,3 @@
+Relies on Twitter Bootstrap v1.40: https://github.com/twitter/bootstrap
+
+Initial structure based off of sinatra-bootstrap: https://github.com/pokle/sinatra-bootstrap
