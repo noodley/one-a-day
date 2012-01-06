@@ -1,27 +1,43 @@
-<h2>Daily tasks for <%=session[:identity]%></h2>
-<table class="zebra-striped">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Task</th>
-            <th>Completed</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Some</td>
-            <td>One</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Joe</td>
-            <td>Sixpack</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Stu</td>
-            <td>Dent</td>
-        </tr>
-    </tbody>
-</table>
+<script src="/lib/raphael-min.js"></script>
+<script type="text/javascript">
+<!--
+function zeroPad(num,count)
+{
+    var numZeropad = num + '';
+    while(numZeropad.length < count) {
+        numZeropad = "0" + numZeropad;
+    }
+    return numZeropad;
+}
+-->
+</script>
+
+<div class="row">
+  <script type="text/javascript">
+    function addItem(paper,level,entry) 
+    {
+      xCoord = 150;
+      // We use a 20 space padding between each checkbox
+      yCoord = level * 50 + (20 * (level - 1));
+      size = 50;
+      roundedRadius = 10;
+      color = "#000"
+
+      var rect = paper.rect(xCoord, yCoord, size, size, roundedRadius);
+      rect.attr("stroke", color);
+
+      var t = paper.text(240, yCoord + 25, entry);
+      t.attr({font: "25px Fontin-Sans, Arial", fill: "#000", "text-anchor": "start"});
+    }
+
+    // Creates canvas 320 × 200 at 10, 50
+    var paper = Raphael(30, 40, 640, 480);
+
+    addItem(paper,1,"First Entry");
+    addItem(paper,2,"Second Entry");
+    addItem(paper,3,"Third Entry");
+    addItem(paper,4,"Fourth Entry");
+    addItem(paper,5,"Fifth Entry");
+    addItem(paper,6,"Sixth Entry");
+  </script>
+</div>

@@ -1,0 +1,76 @@
+<script src="/lib/raphael-min.js"></script>
+<script type="text/javascript">
+<!--
+function zeroPad(num,count)
+{
+    var numZeropad = num + '';
+    while(numZeropad.length < count) {
+        numZeropad = "0" + numZeropad;
+    }
+    return numZeropad;
+}
+-->
+</script>
+
+<div class="row">
+  <div class="span1">
+  <h3>
+    <b>
+      <script type="text/javascript">
+        <!--
+          var currentTime = new Date()
+          var month = currentTime.getMonth() + 1
+          var day = currentTime.getDate()
+          var year = currentTime.getFullYear()
+          document.write(zeroPad(month,2) + "/" + zeroPad(day,2) + "/" + year)
+        //-->
+      </script>
+    </b>
+  </h3>
+  </div>
+  <div class="span15">
+    <form>
+      <fieldset>
+        <!--<legend>Daily tasks for <%=session[:identity]%></legend> -->
+        <div class="clearfix">
+          <div class="input">
+            <ul class="inputs-list">
+              <li>
+                <label>
+                  <input type="checkbox" name="optionsCheckboxes" value="option1" />
+                  <span>Brush the cat</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="optionsCheckboxes" value="option2" />
+                  <span>Feed the cat</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="optionsCheckboxes" value="option2" />
+                  <span>Clean the cat box</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div><!-- /clearfix -->
+      </fieldset>
+    </form>
+  </div> <!-- span15 -->
+</div> <!-- /row -->
+<div class="row">
+  <script type="text/javascript">
+    // Creates canvas 320 × 200 at 10, 50
+    var paper = Raphael(30, 50, 640, 480);
+
+    // Creates circle at x = 50, y = 40, with radius 10
+    var circle = paper.circle(50, 40, 10);
+    // Sets the fill attribute of the circle to red (#f00)
+    circle.attr("fill", "#f00");
+    
+    // Sets the stroke attribute of the circle to white
+    circle.attr("stroke", "#fff");
+  </script>
+</div>

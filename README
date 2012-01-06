@@ -5,6 +5,7 @@ Description:
     
 Status:
     Implement a prototype using session variables.
+    DONE Create a mockup using Raphael.js for the checkboxes
     DONE Support for per username displays.
     DONE Use Bootstrap for the look&feel.
 
